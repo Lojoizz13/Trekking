@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10.03" height="12" viewBox="0 0 10.03 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #aa9b77;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="fa-chevron-right" class="cls-1" d="M1180.79,1109.33a0.4,0.4,0,0,0,0-.67l-7.2-5.53a0.768,0.768,0,0,0-.87,0l-1.61,1.24a0.4,0.4,0,0,0,0,.67l5.15,3.95-5.15,3.96a0.4,0.4,0,0,0,0,.67l1.61,1.23a0.735,0.735,0,0,0,.87,0Z" transform="translate(-1170.94 -1103)"/>
+</svg>
