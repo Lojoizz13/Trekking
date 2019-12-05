@@ -18,6 +18,8 @@ button
   outline: none
   cursor: pointer
 
+$transition-time: 0.4s
+
 //checkbox
 $checkbox-brown: #aa9b77
 $checkbox-grey: #cccccc
@@ -93,6 +95,13 @@ $button-text-white: white
   font-size: 14px
   font-weight: 500
 
+  transition: background-color $transition-time, border $transition-time, color $transition-time
+
+  &:hover
+    background-color: white
+    border: 1px solid black
+    color: black
+
 //h1
 $h1-white: white
 
@@ -113,7 +122,7 @@ $productCard-brown: #aa9b77
 
   background-color: $productCard-grey
 
-  transition: box-shadow 0.3s
+  transition: box-shadow $transition-time
 
   cursor: pointer
 
@@ -233,6 +242,8 @@ $sliderNavigation-brown: #aa9b77
 
 //header
 $header-white: white
+$header-black: black
+
 .header
   background-image: url("../img/headerBg.jpg")
   background-size: cover
@@ -255,6 +266,11 @@ $header-white: white
     color: $header-white
     font-size: 18px
     font-weight: 600
+    transition: all 0.4s
+    transition: color $transition-time
+
+    &:hover
+      color: $header-black
 
   &-h1
     margin-bottom: 10px
@@ -273,6 +289,9 @@ $header-white: white
 //shopping - cart svg
 .shopping-cart
   cursor: pointer
+  transition: fill $transition-time
+  &:hover
+    fill: $header-black
 
 //categories
 $categories-grey: #f5f6f7
@@ -291,3 +310,117 @@ $categories-grey: #f5f6f7
     display: flex
     justify-content: space-between
 
+//category
+.category
+  position: relative
+
+  &::before
+    content: ""
+    z-index: -1
+
+    position: absolute
+    top: 50%
+    right: 0
+
+    width: 100%
+    height: 2px
+    background-color: #cccccc
+
+  &-text
+    font-size: 20px
+    font-weight: 600
+    background-color: white
+    text-transform: uppercase
+
+
+.category-right
+  &-text
+    padding-right: 50px
+
+
+.category-left
+  display: flex
+  justify-content: flex-end
+  &-text
+    padding-left: 50px
+
+
+
+//products
+.products
+  padding: 90px 0 130px 0
+
+  &-block
+    margin-bottom: 90px
+
+    &:last-of-type
+      margin-bottom: 0
+
+  &-category
+    margin-bottom: 50px
+
+  &-sliderNavigation
+    margin-bottom: 20px
+
+
+//about us
+$aboutUs-bg: #aa9b77
+$aboutUs-brown: #837659
+
+.aboutUs
+  padding: 80px 0 70px 0
+
+  background-color: $aboutUs-bg
+
+  text-align: center
+
+  &-block
+    position: relative
+    padding: 80px 55px
+
+    border: 2px solid $aboutUs-brown
+
+  &-p
+    font-weight: 500
+
+  &-h2
+    font-size: 20px
+    color: $aboutUs-brown
+    text-transform: uppercase
+
+    position: absolute
+    top: -15px
+    left: 50%
+    margin-left: -65px
+
+    background-color: $aboutUs-bg
+
+    padding: 0 15px
+
+//footer
+$footer-brown: #837659
+.footer
+  padding: 30px 0
+  background-color: #424242
+  text-transform: uppercase
+  font-size: 16px
+  font-weight: 400
+  color: white
+
+  &-nav
+    display: flex
+    justify-content: space-between
+
+  &-a
+    margin-right: 15px
+    transition: color $transition-time
+    &:hover
+      color: $footer-brown
+
+  &-trekking
+    transition: color $transition-time
+    &:hover
+      color: $footer-brown
+
+    &:last-of-type
+      margin-right: 0
